@@ -118,6 +118,33 @@ module utilities
 		end do
 
 		last_index = i - 1
+	end subroutine
+
+	subroutine readNumber_super_short( str, number, last_index )
+
+		character(len=3) 				:: str
+		integer, intent(  out) 		:: number, last_index
+		logical							:: gameFlag
+		integer        				:: i, digit, n
+
+		i = 1
+		gameFlag = .true.
+
+		do while ( gameFlag )
+			if ( str(i:i)>="0" .and. str(i:i)<="9" ) then
+				i = i + 1
+			else
+				gameFlag = .false.
+			end if
+		end do
+
+		number = 0
+		do n = 1, i
+			call convert2integer( str(n:n), digit )
+			number = number + 10**(i-n-1)*digit
+		end do
+
+		last_index = i - 1
 
 	end subroutine
 

@@ -209,7 +209,7 @@ program main
 	end do
 	print*,""
 	print*,"-----------------------------"
-	print*,"day 3 - part 1 = ",sum
+	print*,"day 3 - part 2 = ",sum
 	print*,"-----------------------------"
 
 end program main
