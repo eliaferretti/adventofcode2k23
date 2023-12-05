@@ -90,7 +90,6 @@ module utilities
 		end do
 
 		last_index = i - 1
-
 	end subroutine
 
 	subroutine readNumber_short( str, number, last_index )
@@ -145,7 +144,35 @@ module utilities
 		end do
 
 		last_index = i - 1
+	end subroutine
 
+	subroutine readNumber_long( str, number, last_index )
+
+		character(len=15) 							:: str
+		integer(kind=8),         intent(  out) :: number != selected_int_kind(16)
+		integer, 				    intent(  out) :: last_index
+		logical											:: gameFlag
+		integer        								:: i, digit, n, add
+
+		i = 1
+		gameFlag = .true.
+
+		do while ( gameFlag )
+			if ( str(i:i)>="0" .and. str(i:i)<="9" ) then
+				i = i + 1
+			else
+				gameFlag = .false.
+			end if
+		end do
+
+		number = 0
+		do n = 0, i-1
+			call convert2integer( str(n:n), digit )
+			add = 10**(i-1-n)*digit
+			number = number + int(add, 8)
+		end do
+
+		last_index = i - 1
 	end subroutine
 
 end module utilities
