@@ -5,8 +5,7 @@ program main
 	implicit none
 
 	! variable declaration
-	integer							:: i, j 
-	integer 							:: digit1 = 0, digit2 = 0	
+	integer							:: i, j
 	integer,      dimension(4) :: time, dist, comb	
 	integer 							:: t, d	
 
