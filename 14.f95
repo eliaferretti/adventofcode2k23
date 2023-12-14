@@ -24,7 +24,7 @@ program main
 		do i = 1, 100
 			map(lineCount,i) = line(i:i)
 		end do
-	print*,map(lineCount,:)
+	!print*,map(lineCount,:)
 	end do
 	close(unit=1)
 
@@ -45,15 +45,15 @@ program main
 		end do 
 	end do
 
-	print*,""
-	print*,"--------------------------------------------------------"
-	print*,""
+	! print*,""
+	! print*,"--------------------------------------------------------"
+	! print*,""
 
 	do i = 1, 100
 		do j = 1, 100
 			if ( m1(i,j) == "O") sum = sum + 101 - i
 		end do
-		print*,m1(i,:) 
+		!print*,m1(i,:) 
 	end do
 
 
@@ -69,7 +69,7 @@ program main
 
 	do k = 1, 1000000000
 
-		print*,"on cycle ", k
+		!print*,"on cycle ", k
 
 		! NORTH
 		i_did_smt = .true.
@@ -148,7 +148,7 @@ program main
 		do j = 1, 100
 			if ( m4(i,j) == "O") sum = sum + 101 - i
 		end do
-		print*,m4(i,:) 
+		!print*,m4(i,:) 
 	end do
 
 
