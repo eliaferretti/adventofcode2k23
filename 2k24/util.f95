@@ -81,7 +81,4 @@ module utilities
 		end do
 		count = count + 1  ! Add one for the last number on the line
 	end subroutine count_integers
-
-
-
 end module utilities
