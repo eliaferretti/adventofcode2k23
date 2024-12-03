@@ -29,7 +29,7 @@ program main
 		print*,n
 	end do
 
-	close(unit=1)
+   close(unit=1)
 
 	print*,""
 	print*,"-----------------------------"

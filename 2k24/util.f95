@@ -81,4 +81,17 @@ module utilities
 		end do
 		count = count + 1  ! Add one for the last number on the line
 	end subroutine count_integers
+
+	subroutine is_digit(char, result)
+		implicit none
+		character(len=1), intent(in) :: char  ! Input character
+		logical, intent(out) :: result        ! Result: .true. if char is a digit, .false. otherwise
+
+		! Check if the character is a digit
+		if (char >= '0' .and. char <= '9') then
+			result = .true.
+		else
+			result = .false.
+		end if
+	end subroutine is_digit
 end module utilities
