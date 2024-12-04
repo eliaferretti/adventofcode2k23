@@ -76,7 +76,7 @@ program main
 
 	print*,""
 	print*,"-----------------------------"
-	print*,"day 1 - part 1 = ",res
+	print*,"day 3 - part 1 = ",res
 	print*,"-----------------------------"
 
 	enabled = .true.
@@ -131,7 +131,7 @@ program main
 
 	print*,""
 	print*,"-----------------------------"
-	print*,"day 1 - part 2 = ",res
+	print*,"day 3 - part 2 = ",res
 	print*,"-----------------------------"
 
 end program main

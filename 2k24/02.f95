@@ -33,7 +33,7 @@ program main
 
 	print*,""
 	print*,"-----------------------------"
-	print*,"day 1 - part 1 = ",res
+	print*,"day 2 - part 1 = ",res
 	print*,"-----------------------------"
 
 	open(unit=2,file=fileName, status="old", action="read")
@@ -73,7 +73,7 @@ program main
 
 	print*,""
 	print*,"-----------------------------"
-	print*,"day 1 - part 2 = ",res
+	print*,"day 2 - part 2 = ",res
 	print*,"-----------------------------"
 
 end program main
